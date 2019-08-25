@@ -3,11 +3,11 @@ package com.example.calculatorpart2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,11 +17,21 @@ public class MainActivity extends AppCompatActivity {
     EditText num1;
     EditText num2;
     Button funcBtn;
+    Switch aSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        aSwitch = findViewById(R.id.switch1);
+        aSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                num1.setText("");
+                num2.setText("");
+            }
+        });
 
         num1 = findViewById(R.id.num1);
         num2 = findViewById(R.id.num2);
