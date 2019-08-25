@@ -17,7 +17,7 @@ public class FunctionActivity extends AppCompatActivity {
 
     Button btnAdd, btnSub, btnMulti, btnDiv;
 
-    int Val1, Val2;
+    double Val1, Val2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +37,16 @@ public class FunctionActivity extends AppCompatActivity {
 
         btnAdd = findViewById(R.id.btn_add);
 
-        Val1 = Integer.parseInt(fNum);
-        Val2 = Integer.parseInt(sNum);
+        Val1 = Double.parseDouble(fNum);
+        Val2 = Double.parseDouble(sNum);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                int result;
+                double result;
                 result = Val1 + Val2;
-                String fResult = Integer.toString(result);
+                String fResult = Double.toString(result);
                 Intent intent = new Intent(FunctionActivity.this, EqualActivity.class);
                 intent.putExtra(MY_KEY3, fResult);
                 startActivity(intent);
@@ -58,9 +58,9 @@ public class FunctionActivity extends AppCompatActivity {
         btnSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int result;
+                double result;
                 result = Val1 - Val2;
-                String fResult = Integer.toString(result);
+                String fResult = Double.toString(result);
                 Intent intent = new Intent(FunctionActivity.this, EqualActivity.class);
                 intent.putExtra(MY_KEY3, fResult);
                 startActivity(intent);
@@ -72,9 +72,9 @@ public class FunctionActivity extends AppCompatActivity {
         btnMulti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int result;
+                double result;
                 result = Val1 * Val2;
-                String fResult = Integer.toString(result);
+                String fResult = Double.toString(result);
                 Intent intent = new Intent(FunctionActivity.this, EqualActivity.class);
                 intent.putExtra(MY_KEY3, fResult);
                 startActivity(intent);
@@ -86,9 +86,9 @@ public class FunctionActivity extends AppCompatActivity {
         btnDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int result;
+                double result;
                 result = Val1 / Val2;
-                String fResult = Integer.toString(result);
+                String fResult = Double.toString(result);
                 Intent intent = new Intent(FunctionActivity.this, EqualActivity.class);
                 intent.putExtra(MY_KEY3, fResult);
                 startActivity(intent);
