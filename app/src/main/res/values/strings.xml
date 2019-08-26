@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">CalculatorPart2</string>
+    <string name="first_number">First number</string>
+    <string name="function">Function</string>
+    <string name="reset_value">Reset value</string>
+    <string name="second_number">Second number</string>
+    <string name="num1">Первое число</string>
+    <string name="num2">Второе число</string>
+    <string name="add">+</string>
+    <string name="sub">-</string>
+    <string name="multi">*</string>
+    <string name="divide">/</string>
+    <string name="result">Result</string>
+    <string name="equal">Equal</string>
+    <string name="share">Share</string>
 </resources>
